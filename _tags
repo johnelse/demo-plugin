@@ -1,0 +1,29 @@
+# OASIS_START
+# DO NOT EDIT (digest: 586a890f98dc7eebb301fb269fc25606)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Executable demo_plugin
+<src/demo_plugin.{native,byte}>: oasis_executable_demo_plugin_byte
+<src/*.ml{,i}>: oasis_executable_demo_plugin_byte
+<src/demo_plugin.{native,byte}>: oasis_executable_demo_plugin_native
+<src/*.ml{,i}>: oasis_executable_demo_plugin_native
+<src/demo_plugin.{native,byte}>: pkg_rrdd-plugin
+<src/demo_plugin.{native,byte}>: pkg_threads
+<src/demo_plugin.{native,byte}>: pkg_xenstore.unix
+<src/demo_plugin.{native,byte}>: pkg_xenstore_transport.unix
+<src/*.ml{,i}>: pkg_rrdd-plugin
+<src/*.ml{,i}>: pkg_threads
+<src/*.ml{,i}>: pkg_xenstore.unix
+<src/*.ml{,i}>: pkg_xenstore_transport.unix
+# OASIS_STOP

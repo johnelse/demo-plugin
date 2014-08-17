@@ -1,0 +1,18 @@
+OASISFormat:  0.3
+Name:         demo-plugin
+Version:      0.1.0
+Synopsis:     Demo RRDD plugin
+Authors:      John Else
+License:      LGPL-2.1 with OCaml linking exception
+Copyrights:   (C) 2014 Citrix Systems
+BuildTools:   ocamlbuild
+Plugins:      META (0.3)
+
+Executable demo_plugin
+  CompiledObject: best
+  Path: src
+  MainIs: demo_plugin.ml
+  Install: false
+  ByteOpt: -bin-annot
+  NativeOpt: -bin-annot
+  BuildDepends: threads, xenstore.unix, xenstore_transport.unix, rrdd-plugin
